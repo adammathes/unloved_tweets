@@ -1,20 +1,29 @@
 # unloved_tweets
 
-This is a simple script to delete your tweets after a few minutes if nobody likes them.
+Delete your tweets after a few minutes if nobody likes them.
 
 Never face the embarrassment of a zero-starred tweet again!
 
-## installation
+## Installation
 
-install dependencies (modern python, tweepy)
+Install dependencies (modern python, tweepy)
 
-## configuration
+   * python (tested) with 2.7
+   * [tweepy](http://www.tweepy.org)
 
-copy example_settings.py to settings.py and fill in the required twitter api keys
+Clone this repo
 
-## running
+    $ git clone https://github.com/adammathes/unloved_tweets.git
 
-by default it runs in DEBUG mode and DELETES NOTHING
+## Configuration
+
+Copy example_settings.py to settings.py 
+
+Fill in the required twitter api keys and make adjustments
+
+## Running
+
+By default it runs in DEBUG mode and DELETES NOTHING
 
 Verify it's working reasonably with -
 
@@ -30,7 +39,7 @@ you probably will want to put this in your crontab with something like
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Adam Mathes
+Copyright (c) 2017 Adam Mathes
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
