@@ -46,7 +46,7 @@ for tweet in public_tweets:
         if tweet.id in tweet_ids_with_replies:
             print "has one or more replies!"
 
-    if minutes<60 and minutes>=MINUTES_TO_LIVE and engagements==0:
+    if minutes<60 and minutes>=MINUTES_TO_LIVE and engagements<REQUIRED_ENGAGEMENTS:
         if DEBUG:
             print "DELETING " + str(tweet.id)
             print tweet.text            
