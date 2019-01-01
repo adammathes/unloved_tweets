@@ -1,6 +1,7 @@
 DEBUG = True
-MINUTES_TO_LIVE = 5
-REQUIRED_ENGAGEMENTS = 1
+MINUTES_TO_LIVE = 5 # how long to let tweets live regardless of engagement
+MINUTES_TO_ARCHIVE = 10080 # ignore tweets that are older than this
+REQUIRED_ENGAGEMENTS = 1 
 DELETED_TWEETS_FILE = '/home/unloved_tweets/dead_tweets.txt'
 consumer_key = ''
 consumer_secret = ''

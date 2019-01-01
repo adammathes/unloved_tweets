@@ -46,14 +46,14 @@ for tweet in public_tweets:
         if tweet.id in tweet_ids_with_replies:
             print "has one or more replies!"
 
-    if minutes<60 and minutes>=MINUTES_TO_LIVE and engagements<REQUIRED_ENGAGEMENTS:
+    if minutes>=MINUTES_TO_LIVE and engagements<REQUIRED_ENGAGEMENTS and minutes<MINUTES_TO_ARCHIVE:
         if DEBUG:
             print "DELETING " + str(tweet.id)
             print tweet.text            
 
         with open(DELETED_TWEETS_FILE, "a") as f:
             f.write( tweet.text.encode('utf8') )
-            f.write("\n\n")
+            f.write("\n\n---\n\n")
 
         if not DEBUG:
             api.destroy_status(tweet.id)
